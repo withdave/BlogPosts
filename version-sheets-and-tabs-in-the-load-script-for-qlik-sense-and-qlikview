@@ -1,0 +1,23 @@
+/*
+
+*************************** INTRODUCTION ****************************
+
+CREATED BY:     withdave
+
+CREATED DATE:   22/03/2018
+
+PURPOSE:        Extraction of raw data from all SQL server data sources and store to QVD
+
+**************************** CHANGE LOG ****************************
+
+Date        Version     Editor          Notes
+2018/03/22  0.1         withdave        Initial development
+2018/03/24  0.2         withdave        Replaced all ODBC connectors with new OLEDB connectors
+
+**************************** GUIDELINES ****************************
+
+// All script should be commented
+
+// All changes should be commented and versioned
+
+*/
