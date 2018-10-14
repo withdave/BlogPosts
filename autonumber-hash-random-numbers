@@ -1,4 +1,4 @@
-	// Load a control value into a temp table
+// Load a control value into a temp table
 // This will be the value we check the value of from each source
 Data:
 LOAD
