@@ -2,21 +2,21 @@
 // This will be the value we check the value of from each source
 Data:
 LOAD
-	1234567						            AS Random
+	1234567				AS Random
 AutoGenerate 1;
 
 // Now concatenate 1,000,000 random values to the control value
 // It's likely we will get some duplicates due to the limited range of values possible
 Concatenate(Data)
 LOAD
-	Floor(rand()*10000000)		    AS Random
+	Floor(rand()*10000000)		AS Random
 AutoGenerate 1000000;
 
 // Now sort this data to ensure the control value isn't the first record
 // This is important for the autonumber functions as they tend to use load order
 Sorted:
 LOAD
-	Random		                    AS Value
+	Random		                AS Value
 RESIDENT Data
 ORDER BY Random;
 
@@ -28,12 +28,12 @@ DROP TABLE Data;
 Hash:
 LOAD
     Value,
-    Autonumber(Value)				    AS AutoNumber,
+    Autonumber(Value)			AS AutoNumber,
     Autonumberhash128(Value)		AS AutoNumberHash128,
     Autonumberhash256(Value)		AS AutoNumberHash256,
-    Hash128(Value)					    AS Hash128,
-    Hash160(Value)					    AS Hash160,
-    Hash256(Value)					    AS Hash256,
+    Hash128(Value)			AS Hash128,
+    Hash160(Value)			AS Hash160,
+    Hash256(Value)			AS Hash256,
     6 as Iteration
 RESIDENT Sorted;
 
