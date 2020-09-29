@@ -1,4 +1,4 @@
 # BlogPosts
-A container for code from my blog posts, as WordPress frequently "corrects" formatting, resulting in invalid code.
+A container for code from my blog posts to preserve formatting.
 
-Find the posts at: https://withdave.com
+Posts at: https://withdave.com
